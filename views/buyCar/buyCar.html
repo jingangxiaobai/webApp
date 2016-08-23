@@ -1,0 +1,37 @@
+<ion-view view-title="购物车">
+    <ion-content>
+        <div class="alert alert-warning" ng-show="cartData.length == 0">
+            您的购物车是空的。<a href="#" class="alert-link">继续购物</a>
+        </div>
+        <div ng-hide="cartData.length == 0">
+            <table class="table">
+                <tr class="row" ng-repeat="item in cartData">
+                    <td class="col-10 box"><img ng-src="{{item.product.imgsrc}}"></td>
+                    <td class="col-20">{{item.product.name}}</td>
+                    <td class="col-20">{{item.product.price | currency:"RMB ￥"}}</td>
+                    <td class="col-20">
+                        <button ng-click="numberReduce(item)">-</button>
+                        {{item.number}}
+                        <button ng-click="numberAdd(item)">+</button>
+                    </td>
+                    <td class="col-20">{{item.product.price * item.number | currency:"RMB ￥"}}</td>
+                    <td>
+                        <button ng-click="removeFromCart(item)">删除</button>
+                    </td>
+                </tr>
+                <tr class="row">
+                    <td class="col-40" >总金额:</td>
+                    <td class="col-40">
+                        {{totalMon() | currency:"RMB ￥"}}
+                        {{totalNum()}}
+                    </td>
+                </tr>
+            </table>
+            <div class="row">
+                <button class="rowBtn"><a class="btn btn-primary" href="#">继续购物</a></button>
+                <button  class="rowBtn"><a class="btn btn-primary"  ui-sref="login">提交订单</a></button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

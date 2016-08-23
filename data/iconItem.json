@@ -1,0 +1,62 @@
+[
+  {
+    "name": "新疆库尔特香梨",
+    "description": "每日限量5000份",
+    "price": 20,
+    "imgsrc": "images/fruit1.jpg"
+  },
+  {
+    "name": "越南红心火龙果",
+    "description": "百样吃法 全能营养果",
+    "price": 30,
+    "imgsrc": "images/fruit5.jpg"
+  },
+  {
+    "name": "美国大苹果",
+    "description": "新鲜水润 一口停不下来",
+    "price": 50,
+    "imgsrc": "images/fruit3.jpg"
+  },
+  {
+    "name": "泰国椰青",
+    "description": "美味新鲜更营养",
+    "price": 18,
+    "imgsrc": "images/fruit4.jpg"
+  },
+  {
+    "name": "海南木瓜",
+    "description": "美味新鲜更营养",
+    "price": 16,
+    "imgsrc": "images/fruit6.jpg"
+  },
+  {
+    "name": "佳沛奇异果",
+    "description": "美味新鲜更营养",
+    "price": 19,
+    "imgsrc": "images/fruit7.jpg"
+  },
+  {
+    "name": "越南红柚",
+    "description": "美味新鲜更营养",
+    "price": 22,
+    "imgsrc": "images/fruit8.jpg"
+  },
+  {
+    "name": "新疆大枣(脆枣)",
+    "description": "每日限量5000份",
+    "price": 32,
+    "imgsrc": "images/fruit9.jpg"
+  },
+  {
+    "name": "加拿大蓝莓",
+    "description": "新鲜水润 一口停不下来",
+    "price":15,
+    "imgsrc": "images/fruit11.jpg"
+  },
+  {
+    "name": "海南大芒果",
+    "description": "百样吃法 全能营养果",
+    "price":38,
+    "imgsrc": "images/fruit10.jpg"
+  }
+]

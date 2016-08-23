@@ -1,0 +1,58 @@
+<ion-view view-title="天天果园">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新" pulling-icon="icon ion-fork" on-refresh="refresh()"></ion-refresher>
+        <!--轮播图-->
+        <ion-slide-box auto-play="true" slide-interval="1000" does-continue="true" show-pager="true"
+                       on-slide-changed="slideChanged(index)" pager-click="pagerClick(index)" active-slide="page">
+            <ion-slide>
+                <div class="box"><img src="images/slides-1_03.jpg"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="images/slides-1_06.jpg"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="images/slides-1_13.jpg"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="images/slides-1_09.jpg"></div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box"><img src="images/slides-1_15.jpg"></div>
+            </ion-slide>
+        </ion-slide-box>
+        <!--分类图标导航-->
+        <div class="row iconItem">
+            <div class="col" ui-sref="giftBox">
+                <span class="box"><img src="images/itemicon_03.gif"></span>
+                <p>新客专享</p>
+            </div>
+            <div class="col" ui-sref="freshFruit">
+                <span class="box"><img src="images/itemicon_05.gif"></span>
+                <p>闪电送</p>
+            </div>
+            <div class="col" ui-sref="giftBox">
+                <span class="box"><img src="images/itemicon_07.gif"></span>
+                <p>天天有礼</p>
+            </div>
+            <div class="col" ui-sref="freshFruit">
+                <span class="box"><img src="images/itemicon_09.gif"></span>
+                <p>新品抢鲜</p>
+            </div>
+        </div>
+        <!--下拉刷新-->
+        <ion-list class="card">
+
+            <div class="box"><img src="images/banner_04_03.jpg"></div>
+            <ion-item class="item item-thumbnail-left"  ng-repeat="product in products">
+                <img ng-src="{{product.imgsrc}}">
+                <h3>{{product.description}}</h3>
+                <p>{{product.name}}</p>
+                <p>{{product.price | currency:"RMB ￥"}}</p>
+                <button ng-click="addToCart(product)"><i  class="ion-android-add-circle"></i></button>
+            </ion-item>
+            <ion-infinite-scroll on-infinite="loadMore()" immediate-check="false"></ion-infinite-scroll>
+        </ion-list>
+        <!--无限滚动-->
+
+    </ion-content>
+</ion-view>
